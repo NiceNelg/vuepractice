@@ -7,6 +7,7 @@ import router from './router';
 // 引入自适应css文件
 import './assets/styles/reset.css';
 import './assets/styles/border.css';
+import './assets/styles/iconfont.css';
 
 //引入快速点击
 import fastclick from 'fastclick';
