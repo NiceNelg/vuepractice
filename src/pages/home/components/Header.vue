@@ -31,9 +31,9 @@ export default {
       width .64rem
       float left
       padding-left .2rem
-        .back-icon
-          text-align center
-          font-size .4rem
+      .back-icon
+        text-align center
+        font-size .4rem
     .header-input
       flex 1
       height .64rem
