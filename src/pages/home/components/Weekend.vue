@@ -4,7 +4,7 @@
     <ul>
       <li 
         class="item border-bottom"
-        v-for="item in recommendList"
+        v-for="item in list"
         :key="item.id"
       >
         <div class="item-img-wrapper">
@@ -22,34 +22,11 @@
 <script>
 export default {
   name: 'HomeWeekend',
+  props: {
+    list: Array
+  },
   data() {
     return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg',
-          title: '大连圣亚海洋世界',
-          desc: '第三方士大夫的的方式发多少'
-        },
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg',
-          title: '大连圣亚海洋世界',
-          desc: '第三方士大夫的的方式发多少'
-        },
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg',
-          title: '大连圣亚海洋世界',
-          desc: '第三方士大夫的的方式发多少'
-        },
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg',
-          title: '大连圣亚海洋世界',
-          desc: '第三方士大夫的的方式发多少'
-        }
-      ]
     }
   }
 }
@@ -59,7 +36,6 @@ export default {
 <style lang="stylus" scoped>
   @import '~styles/mixins.styl';
   .title
-    margin-top .2rem
     line-height .8rem
     background #eee
     text-indent .2rem

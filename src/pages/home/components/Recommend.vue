@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="title">热销组件</div>
+    <div class="title">热门</div>
     <ul>
       <li 
         class="item border-bottom"
-        v-for="item in recommendList"
+        v-for="item in list"
         :key="item.id"
       >
         <img class="item-img" :src="item.imgUrl" alt="" />
@@ -21,34 +21,11 @@
 <script>
 export default {
   name: 'HomeRecommend',
+  props: {
+    list: Array
+  },
   data() {
     return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg',
-          title: '大连圣亚海洋世界',
-          desc: '第三方士大夫的的方式发多少'
-        },
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg',
-          title: '大连圣亚海洋世界',
-          desc: '第三方士大夫的的方式发多少'
-        },
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg',
-          title: '大连圣亚海洋世界',
-          desc: '第三方士大夫的的方式发多少'
-        },
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg',
-          title: '大连圣亚海洋世界',
-          desc: '第三方士大夫的的方式发多少'
-        }
-      ]
     }
   }
 }
