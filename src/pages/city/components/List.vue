@@ -5,7 +5,7 @@
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list">
           <div class="button-wrapper">
-            <div class="button">广州</div>
+            <div class="button">{{this.$store.state.city}}</div>
           </div>
         </div>
       </div>
@@ -15,6 +15,7 @@
           <div class="button-wrapper"
             v-for="(item) of hot"
             :key="item.id"
+            @click="handleCityClick(item.name)"
           >
             <div class="button">{{item.name}}</div>
           </div>
@@ -31,7 +32,8 @@
           <div
             class="item border-bottom"
             v-for="(value) of item"
-            :key="value.id"  
+            :key="value.id"
+            @click="handleCityClick(value.name)"
           >
             {{value.name}}
           </div>
@@ -58,6 +60,12 @@ export default {
       if(this.letter) {
         this.scroll.scrollToElement(this.$refs[this.letter][0]);
       }
+    }
+  },
+  methods: {
+    handleCityClick(city) {
+      this.$store.commit('changeCity', city);
+      this.$router.push('/');
     }
   }
 }
