@@ -4,16 +4,16 @@
       class="banner"
       @click="handleBannerClick"
     >
-      <img class="banner-img" />
+      <img class="banner-img" :src="bannerImg"/>
       <div class="banner-info">
-        <div class="banner-title"></div>
+        <div class="banner-title">{{sightName}}</div>
         <div class="banner-number">
           <span class="iconfont banner-icon">&#xe608;</span>
         </div>
       </div>
     </div>
     <common-gallary
-      :imgs="imgs"
+      :imgs="gallaryImgs"
       v-show="showGallary"
       @close="handleGallaryClose"
     ></common-gallary>
@@ -27,13 +27,14 @@ export default {
   components: {
     CommonGallary
   },
+  props: {
+    bannerImg: String,
+    gallaryImgs: Array,
+    sightName: String
+  },
   data() {
     return {
-      showGallary: false,
-      imgs: [
-        'http://img1.qunarzz.com/sight/source/1505/b2/fde1bfcd057a52.jpg_r_640x214_bbf3fa44.jpg',
-        'http://img1.qunarzz.com/sight/source/1505/b2/fde1bfcd057a52.jpg_r_640x214_bbf3fa44.jpg'
-      ]
+      showGallary: false
     };
   },
   methods: {

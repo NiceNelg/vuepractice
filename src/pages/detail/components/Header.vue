@@ -24,6 +24,8 @@
 <script>
 export default {
   name: "DetailHeader",
+  props: {
+  },
   data() {
     return {
       showAbs: true,
